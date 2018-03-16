@@ -1,0 +1,12 @@
+{
+    "name": "sunmax-react",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/yipsun/SunMax-React.git",
+    "author": "Sonda Yip",
+    "devDependencies": { },
+    "dependencies": {
+        "create-react-app" : "1.5.2"
+    }
+}
+  
