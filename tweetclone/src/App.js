@@ -8,7 +8,7 @@ class App extends Component {
     render() {
 
         const cards = data.tweet.map((card) => {
-            return <Card key="card.id_str" data="card" />
+            return <Card key={card.id_str} data={card} />
         })
 
         return (
