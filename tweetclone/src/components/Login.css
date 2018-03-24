@@ -1,0 +1,36 @@
+.login {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.login__cell {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+}
+
+.login__cell-content {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.login__cell:first-child {
+    color: #fff;
+    background-color: #1da1f2;
+}
+
+.login__communication-item {
+
+}
+
+.login button {
+    border-radius: 100px;
+    background-color: #1da1f2;
+    font-size: 14px;
+    padding: 6px 16px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}

@@ -8,7 +8,7 @@ class App extends Component {
     tweet: []
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.ref = base.syncState(`tweet`, {
       context: this,
       state: "tweet"
