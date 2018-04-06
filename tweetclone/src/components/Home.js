@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import "./Login.css";
-import firebase from "firebase";
-import base, { firebaseApp } from "../base";
+import "./Home.css";
+import LoginButton from "./LoginButton";
 
-class Login extends Component {
-  authenticate = provider => {
-    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
-    firebase
-      .auth()
-      .signInWithPopup(authProvider)
-      .then(this.authHandler);
-  };
-
-  authHandler = () => {
-    this.props.history.push(`/app`);
-  };
+class Home extends Component {
+  componentWillMount() {
+    if (localStorage.logged) {
+      this.props.history.push(`/`);
+    }
+  }
 
   render() {
     return (
@@ -36,9 +29,7 @@ class Login extends Component {
           <div className="login__cell-content">
             <h2>See what’s happening in the world right now</h2>
             <h3>Join Twitter today.</h3>
-            <button onClick={() => this.authenticate("Github")}>
-              Log in with Github
-            </button>
+            <LoginButton provider="Github" history={this.props.history} />
           </div>
         </div>
       </div>
@@ -46,4 +37,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Home;

@@ -8,6 +8,12 @@ class App extends Component {
     tweet: []
   };
 
+  componentWillMount() {
+    if (!localStorage.logged) {
+      this.props.history.push(`/home`);
+    }
+  }
+
   componentDidMount() {
     this.ref = base.syncState(`tweet`, {
       context: this,
