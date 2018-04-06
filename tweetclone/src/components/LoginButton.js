@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from "firebase";
+import { withRouter } from "react-router-dom";
 
 const LoginButton = props => {
   const { provider, history } = props;
@@ -18,8 +19,10 @@ const LoginButton = props => {
   };
 
   return (
-    <button onClick={() => authenticate(provider)}>Log in with Github</button>
+    <button onClick={() => authenticate(provider)}>
+      Log in with {provider}
+    </button>
   );
 };
 
-export default LoginButton;
+export default withRouter(LoginButton);

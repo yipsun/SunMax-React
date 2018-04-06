@@ -29,7 +29,7 @@ class Home extends Component {
           <div className="login__cell-content">
             <h2>See what’s happening in the world right now</h2>
             <h3>Join Twitter today.</h3>
-            <LoginButton provider="Github" history={this.props.history} />
+            <LoginButton provider="Github" />
           </div>
         </div>
       </div>
